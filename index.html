@@ -2,189 +2,213 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Pizza delivery Glasgow | Artisan pizza Glasgow</title>
-  <meta name="description" content="Craving artisan pizza in Glasgow? Get piping hot, quirky, and ridiculously delicious pizzas delivered to your door – fast!">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="keywords" content="Pizza Delivery Glasgow, Artisan Pizza Glasgow, Best Pizza, Fast Delivery, Homemade Pizza">
-  <meta name="author" content="Pizza delivery Glasgow">
-  <link rel="icon" type="image/png" href="https://img.icons8.com/emoji/48/000000/pizza.png"/>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+  <title>Side-A | Artisan Pizza Delivery Glasgow</title>
+  <meta name="description" content="Side-A delivers quirky, artisan pizza in Partick, Glasgow. Discover bold flavours, fast delivery, and some of the best artisan pizza Glasgow offers.">
+  <meta name="keywords" content="Pizza delivery Glasgow, Artisan pizza Glasgow, pizza Partick, signature pizzas, gourmet delivery Glasgow">
+
+  <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&display=swap" rel="stylesheet">
+
   <style>
-    body { font-family: 'IBM Plex Mono', monospace !important; }
+    html {
+      font-family: 'IBM Plex Mono', monospace;
+    }
+    body {
+      background-color: #0f0f0f;
+      color: #fff;
+    }
+    ::selection {
+      background: #ff4500;
+      color: #fff;
+    }
   </style>
 </head>
-<body class="bg-black text-white flex flex-col min-h-screen">
+<body class="flex flex-col min-h-screen bg-black text-white">
 
-  <!-- Navigation -->
-  <header class="bg-black py-4 sticky top-0 z-50 shadow-lg">
-    <nav class="container mx-auto flex items-center justify-between px-4">
-      <a href="#" class="text-2xl md:text-3xl font-extrabold tracking-tight text-red-600">
-        🍕 Pizza Delivery Glasgow
-      </a>
-      <ul class="flex gap-6 text-orange-400 text-base font-semibold">
-        <li><a href="#home" class="hover:text-red-400 transition">Home</a></li>
-        <li><a href="#about" class="hover:text-red-400 transition">About</a></li>
-        <li><a href="#contact" class="hover:text-red-400 transition">Contact</a></li>
+  <!-- Header / Navigation -->
+  <header>
+    <nav class="max-w-6xl mx-auto flex items-center justify-between p-6">
+      <a href="#" class="text-3xl font-bold text-red-600 tracking-tight">Side-<span class="text-orange-500">A</span></a>
+      <ul class="hidden md:flex space-x-10 text-lg font-medium">
+        <li>
+          <a href="#home" class="hover:text-orange-400 transition">Home</a>
+        </li>
+        <li>
+          <a href="#about" class="hover:text-orange-400 transition">About</a>
+        </li>
+        <li>
+          <a href="#contact" class="hover:text-orange-400 transition">Contact</a>
+        </li>
       </ul>
+      <button class="md:hidden text-2xl" aria-label="Open menu">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-8 w-8 text-white">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16" />
+        </svg>
+      </button>
     </nav>
   </header>
 
   <!-- Hero Section -->
   <main id="home" class="flex-1">
-    <section class="container mx-auto flex flex-col md:flex-row items-center justify-between px-4 py-16 md:py-24">
-      <div class="md:w-1/2 flex flex-col items-start justify-center">
-        <h1 class="text-4xl md:text-6xl font-bold text-red-500 mb-4 leading-tight">
-          Artisan Pizza in Glasgow.<br>
-          <span class="text-orange-400">Order. Eat. Repeat.</span>
-        </h1>
-        <p class="text-lg md:text-xl text-orange-100 font-light mb-8">
-          We sling fresh, fiery, wood-fired pizzas—where crusts are chunky, cheese is gooey, and toppings get undressed in the best way. Fast delivery, all the flavour, zero judgement.
-        </p>
-        <a href="#contact" class="inline-block bg-red-600 hover:bg-orange-500 text-white font-semibold py-3 px-7 rounded shadow-md shadow-orange-200 transition">
-          Order Now &rarr;
-        </a>
-      </div>
-      <div class="md:w-1/2 mt-10 md:mt-0 flex justify-end">
-        <img
-          src="https://images.unsplash.com/photo-1519864602351-f49707b1c016?auto=format&fit=crop&w=600&q=80"
-          alt="Fresh artisan pizza - Pizza delivery Glasgow"
-          class="w-full h-72 md:h-96 object-cover rounded-xl shadow-xl border-4 border-orange-600"
-          loading="eager"
-        />
+    <section class="relative bg-gradient-to-br from-red-800 via-black to-black">
+      <div class="max-w-6xl mx-auto flex flex-col-reverse md:flex-row items-center py-16 px-6 gap-10">
+        <div class="w-full md:w-1/2 space-y-8">
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-4 text-white">
+            Glasgow’s Wildest <span class="text-orange-500">Artisan Pizza Delivery</span>
+          </h1>
+          <p class="text-lg md:text-xl text-gray-200 mb-2 font-medium">Side-A brings <span class="text-red-400 font-bold">artisan pizza</span> to Partick, Glasgow – delivered to your doorstep with a side of attitude.</p>
+          <ul class="list-disc pl-5 space-y-1 text-orange-400">
+            <li>8 signature pizzas, with zero chill 🍕</li>
+            <li>Faster than your playlist changes tracks</li>
+            <li>Quirky, bold, and unapologetically delicious</li>
+          </ul>
+          <a href="#contact" class="inline-block bg-orange-500 hover:bg-red-600 transition text-white font-bold px-8 py-3 rounded-full mt-6 text-lg shadow-lg">Order Now</a>
+        </div>
+        <div class="w-full md:w-1/2 flex justify-center">
+          <img src="https://images.unsplash.com/photo-1519864600265-abb23847ef29?auto=format&fit=crop&w=700&q=80"
+               alt="Artisan pizza from Side-A"
+               class="rounded-2xl shadow-2xl border-4 border-orange-500 w-full max-w-md object-cover"
+               loading="lazy" />
+        </div>
       </div>
     </section>
 
     <!-- Section 1: Our Pizzas -->
-    <section class="bg-red-600 py-16" id="about">
-      <div class="container mx-auto px-4 flex flex-col-reverse md:flex-row items-center md:space-x-12">
-        <div class="md:w-1/2 mt-8 md:mt-0">
-          <img
-            src="https://images.unsplash.com/photo-1548365328-9f547df93c07?auto=format&fit=crop&w=600&q=80"
-            alt="Closeup of artisan pizza"
-            class="rounded-xl shadow-lg border-4 border-black object-cover w-full h-64 md:h-80"
-            loading="lazy"
-          />
+    <section class="max-w-6xl mx-auto py-16 px-6" aria-labelledby="our-pizzas">
+      <div class="flex flex-col md:flex-row items-center gap-12">
+        <div class="w-full md:w-1/2">
+          <img src="https://images.unsplash.com/photo-1548365328-8b8493996a3a?auto=format&fit=crop&w=600&q=80"
+               alt="Signature artisan pizza"
+               class="rounded-xl shadow-lg border-2 border-red-600 object-cover w-full"
+               loading="lazy" />
         </div>
-        <div class="md:w-1/2 text-black">
-          <h2 class="text-3xl md:text-4xl font-bold mb-4">
-            Pizzas Handcrafted With Sass
-          </h2>
-          <p class="text-lg mb-4">
-            Forget boring. Our dough’s cheeky, our ingredients fresh. Go for all-out classics or get weird with our monthly Mystery Pizza. (Pineapple? We don't judge. Much.)
+        <div class="w-full md:w-1/2">
+          <h2 id="our-pizzas" class="text-3xl sm:text-4xl font-bold text-orange-500 mb-4">Signature Pizzas, Zero Chill</h2>
+          <p class="text-gray-200 text-lg mb-4">
+            Ordinary delivery pizza is <span class="line-through decoration-red-600">so last year</span>. Bite into Side-A’s <strong class="text-red-400">signature 8 pizzas</strong> – wild toppings, top-tier dough, and bold flavours to turn your tastebuds up to eleven.
           </p>
-          <ul class="space-y-2 pl-5 list-disc text-base font-semibold">
-            <li>Fiery Wood-Fired Ovens</li>
-            <li>Locally-sourced, unashamedly cheesy</li>
-            <li>Vegan, gluten-free & carnivore options</li>
+          <ul class="pl-4 list-disc text-orange-400 space-y-1">
+            <li>Hand-stretched sourdough bases</li>
+            <li>Home-blitzed, top-secret sauces</li>
+            <li>Locally sourced cheese, meats, and veg</li>
           </ul>
         </div>
       </div>
     </section>
 
-    <!-- Section 2: Delivery Promise -->
-    <section class="bg-black py-16">
-      <div class="container mx-auto px-4 flex flex-col md:flex-row items-center md:space-x-12">
-        <div class="md:w-1/2 mb-8 md:mb-0">
-          <h2 class="text-3xl md:text-4xl font-bold text-orange-400 mb-4">
-            Late-night cravings? We've got you.
-          </h2>
-          <p class="text-lg text-orange-100 mb-4">
-            We deliver steaming hot pizzas across Glasgow, from city centre to your slightly questionable party. Rain, wind, or bagpipe parades—our delivery ninjas don’t flinch.
-          </p>
-          <div class="flex gap-5 mt-6">
-            <span class="inline-block bg-orange-500 text-black font-bold px-6 py-2 rounded-full">
-              30min Avg Delivery
-            </span>
-            <span class="inline-block bg-orange-900 text-orange-200 font-semibold px-6 py-2 rounded-full">
-              7 days a week
-            </span>
-          </div>
+    <!-- Section 2: About Side-A -->
+    <section id="about" class="bg-gradient-to-r from-black via-red-900 to-black py-16">
+      <div class="max-w-6xl mx-auto flex flex-col md:flex-row-reverse items-center gap-12 px-6">
+        <div class="w-full md:w-1/2">
+          <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=600&q=80"
+               alt="Side-A team at work"
+               class="rounded-xl shadow-lg border-2 border-orange-500 object-cover w-full"
+               loading="lazy" />
         </div>
-        <div class="md:w-1/2">
-          <img
-            src="https://images.unsplash.com/photo-1523987355523-c7b5b0723c6f?auto=format&fit=crop&w=600&q=80"
-            alt="Fast pizza delivery van"
-            class="rounded-xl shadow-lg border-4 border-red-600 object-cover w-full h-64 md:h-80"
-            loading="lazy"
-          />
+        <div class="w-full md:w-1/2">
+          <h2 class="text-3xl sm:text-4xl font-bold text-red-400 mb-4">About Side-A</h2>
+          <p class="text-gray-200 text-lg mb-4">
+            We’re not your average pizza shop. We're <span class="italic text-orange-400">record collectors, pun lovers, and dough rebels</span> tossing up the wildest pies in the West End. 
+          </p>
+          <p class="text-gray-300 mb-1">
+            <span class="font-semibold text-orange-500">Where?</span> Park Road, Partick, Glasgow
+          </p>
+          <p class="text-gray-300 mb-1">
+            <span class="font-semibold text-orange-500">Why?</span> Because you deserve more than a soggy Margherita at midnight.
+          </p>
         </div>
       </div>
     </section>
 
-    <!-- Section 3: What Makes Us Different? -->
-    <section class="bg-orange-500 py-16">
-      <div class="container mx-auto px-4 flex flex-col md:flex-row items-center md:space-x-12">
-        <div class="md:w-1/2 flex items-center justify-center">
-          <img
-            src="https://images.unsplash.com/photo-1542281286-9e0a16bb7366?auto=format&fit=crop&w=600&q=80"
-            alt="Pizza being sliced"
-            class="rounded-xl shadow-lg border-4 border-black object-cover w-full h-64 md:h-80"
-            loading="lazy"
-          />
+    <!-- Section 3: Why Choose Us -->
+    <section class="max-w-6xl mx-auto py-16 px-6" aria-labelledby="why-choose">
+      <div class="flex flex-col md:flex-row items-center gap-12">
+        <div class="w-full md:w-1/2">
+          <h2 id="why-choose" class="text-3xl sm:text-4xl font-bold text-orange-500 mb-4">Why Side-A?</h2>
+          <ul class="list-none space-y-3 text-lg">
+            <li class="flex items-center">
+              <span class="bg-orange-500 text-black mr-3 rounded-full p-2">
+                <svg aria-hidden="true" focusable="false" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3-8V8a1 1 0 00-2 0v2a1 1 0 002 0zm-4 0V8a1 1 0 00-2 0v2a1 1 0 002 0zm7 0a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                </svg>
+              </span>
+              Pizza delivery Glasgow, but upgraded
+            </li>
+            <li class="flex items-center">
+              <span class="bg-orange-500 text-black mr-3 rounded-full p-2">
+                <svg aria-hidden="true" focusable="false" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M8.257 3.099c.366-.446.957-.691 1.608-.57l7.588 1.38c.984.18 1.517 1.276 1.031 2.098l-3.846 6.273a1.823 1.823 0 01-1.305.882l-7.588-1.38a1.33 1.33 0 01-1.03-2.097l3.846-6.273a1.823 1.823 0 011.305-.883z"/>
+                </svg>
+              </span>
+              Seamless online ordering (no weird apps)
+            </li>
+            <li class="flex items-center">
+              <span class="bg-orange-500 text-black mr-3 rounded-full p-2">
+                <svg aria-hidden="true" focusable="false" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M2.003 12.883l7.13 3.258a1 1 0 00.735 0l7.13-3.258a1 1 0 00.002-1.881l-7.13-3.258a1 1 0 00-.735 0l-7.13 3.258a1 1 0 00-.002 1.881z"/>
+                </svg>
+              </span>
+              Edgy, humorous, and a bit rebellious
+            </li>
+          </ul>
         </div>
-        <div class="md:w-1/2 mt-8 md:mt-0 text-black">
-          <h2 class="text-3xl md:text-4xl font-bold mb-4">
-            Not Just Pizza—An&nbsp;Experience
-          </h2>
-          <p class="mb-4 text-lg">
-            Pizza shouldn’t be snobby. We’re unapologetically fun, freakishly fast, and always a little cheeky. Want a heart-shaped pizza? Done. Secret sauce doodle art? Maybe. Prepare your tastebuds for a wild ride.
-          </p>
-          <p class="text-md font-semibold">
-            Glasgow’s quirkiest slices—no fancy Italian vowels required.
-          </p>
+        <div class="w-full md:w-1/2">
+          <img src="https://images.unsplash.com/photo-1542281286-9e0a16bb7366?auto=format&fit=crop&w=600&q=80"
+               alt="Fresh artisan pizza delivery in Glasgow"
+               class="rounded-xl shadow-lg border-2 border-red-600 object-cover w-full"
+               loading="lazy" />
         </div>
+      </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section id="contact" class="bg-gradient-to-bl from-orange-900 via-black to-black py-16">
+      <div class="max-w-2xl mx-auto px-6">
+        <h2 class="text-3xl sm:text-4xl font-bold text-center text-orange-500 mb-4">Let’s Talk Pizza 🍕</h2>
+        <p class="text-center text-gray-200 mb-8">Want artisan pizza for your party, got a question about our menu, or just want to say hi? Fill out the form below &ndash; we’re listening (while spinning records).</p>
+        <form class="space-y-6 bg-black bg-opacity-80 rounded-xl p-8 border border-orange-600 shadow-2xl"
+              name="contact" method="POST" autocomplete="on">
+          <div>
+            <label for="name" class="block text-gray-300 font-semibold mb-1">Name</label>
+            <input type="text" id="name" name="name" required
+                   class="w-full px-4 py-3 rounded-lg border border-orange-400 bg-gray-900 text-white focus:ring-2 focus:ring-orange-500 outline-none transition"
+                   placeholder="Your full name">
+          </div>
+          <div>
+            <label for="email" class="block text-gray-300 font-semibold mb-1">Email</label>
+            <input type="email" id="email" name="email" required
+                   class="w-full px-4 py-3 rounded-lg border border-orange-400 bg-gray-900 text-white focus:ring-2 focus:ring-orange-500 outline-none transition"
+                   placeholder="your@email.com">
+          </div>
+          <div>
+            <label for="message" class="block text-gray-300 font-semibold mb-1">Message</label>
+            <textarea id="message" name="message" rows="5" required
+                      class="w-full px-4 py-3 rounded-lg border border-orange-400 bg-gray-900 text-white focus:ring-2 focus:ring-orange-500 outline-none transition"
+                      placeholder="Tell us which pizza needs to exist..."></textarea>
+          </div>
+          <button type="submit"
+                  class="w-full py-3 bg-red-600 hover:bg-orange-500 text-white font-bold text-lg rounded-lg shadow hover:scale-105 transform transition">
+            Send Message
+          </button>
+        </form>
       </div>
     </section>
   </main>
 
-  <!-- Contact Section -->
-  <section id="contact" class="bg-black py-16">
-    <div class="container mx-auto px-4 max-w-2xl">
-      <h2 class="text-3xl md:text-4xl font-bold text-center text-red-500 mb-8">
-        Hungry Yet? Let’s Talk <span class="text-orange-400">Pizza</span>
-      </h2>
-      <form class="bg-black border-2 border-orange-400 rounded-xl shadow-lg p-8 space-y-6" autocomplete="off">
-        <div>
-          <label for="name" class="block text-orange-100 mb-2 font-semibold">Name</label>
-          <input type="text" id="name" name="name" required 
-                 class="w-full px-4 py-3 bg-black border border-orange-500 rounded focus:outline-none focus:ring-2 focus:ring-orange-400 text-white placeholder:text-orange-200"
-                 placeholder="Your real (or pizza-eating) name">
-        </div>
-        <div>
-          <label for="email" class="block text-orange-100 mb-2 font-semibold">Email</label>
-          <input type="email" id="email" name="email" required
-                 class="w-full px-4 py-3 bg-black border border-orange-500 rounded focus:outline-none focus:ring-2 focus:ring-orange-400 text-white placeholder:text-orange-200"
-                 placeholder="you@pizza.com">
-        </div>
-        <div>
-          <label for="message" class="block text-orange-100 mb-2 font-semibold">Message</label>
-          <textarea id="message" name="message" rows="4" required
-                    class="w-full px-4 py-3 bg-black border border-orange-500 rounded focus:outline-none focus:ring-2 focus:ring-orange-400 text-white placeholder:text-orange-200"
-                    placeholder="Tell us your wildest pizza dreams…"></textarea>
-        </div>
-        <button type="submit"
-                class="w-full bg-red-600 hover:bg-orange-500 text-white font-extrabold py-4 px-6 rounded transition text-lg tracking-wider shadow-md shadow-orange-200">
-          Send Pizza Signal 🚀
-        </button>
-      </form>
-      <p class="text-center text-orange-300 text-sm mt-8">
-        Or, just <a href="mailto:info@pizzadeliveryglasgow.com" class="underline hover:text-red-500">drop us an email</a>.
-      </p>
-    </div>
-  </section>
-  
   <!-- Footer -->
-  <footer class="bg-black border-t border-orange-800 py-6">
-    <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
-      <span class="text-orange-400 text-sm">&copy; 2024 Pizza Delivery Glasgow. All crusts reserved.</span>
-      <div class="flex gap-4 mt-3 md:mt-0">
-        <a href="#" class="hover:text-red-400 text-orange-300 transition font-semibold">Home</a>
-        <a href="#about" class="hover:text-red-400 text-orange-300 transition font-semibold">About</a>
-        <a href="#contact" class="hover:text-red-400 text-orange-300 transition font-semibold">Contact</a>
+  <footer class="bg-black border-t border-orange-700 mt-10">
+    <div class="max-w-6xl mx-auto px-6 py-8 flex flex-col md:flex-row items-center md:justify-between gap-4">
+      <p class="text-gray-400 text-center md:text-left text-sm">
+        &copy; 2024 Side-A. Artisan Pizza Delivery Glasgow. Eat bold, stay quirky.
+      </p>
+      <div class="flex space-x-6 justify-center md:justify-end">
+        <a href="#" class="hover:text-orange-400 transition">Home</a>
+        <a href="#about" class="hover:text-orange-400 transition">About</a>
+        <a href="#contact" class="hover:text-orange-400 transition">Contact</a>
       </div>
     </div>
   </footer>
-
 </body>
 </html>
