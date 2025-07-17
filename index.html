@@ -2,203 +2,175 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Third Date Beer | Craft Beer Glasgow & Brewery Taproom</title>
-  <meta name="description" content="Third Date Beer is a microbrewery in Partick, Glasgow, offering quirky, craft beer and a lively brewery taproom. Explore craft beer in Glasgow." />
-  <meta name="keywords" content="Craft beer Glasgow, Brewery taproom Glasgow, Third Date Beer, Microbrewery Partick" />
-  <meta name="author" content="Third Date Beer" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700;900&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <title>Third Date Beer | Craft Beer Microbrewery in Partick, Glasgow</title>
+  <meta name="description" content="Third Date Beer is a quirky craft beer microbrewery and taproom in Partick, Glasgow. Come sample our tasty beers and discover craft beer in Glasgow with us." />
+  <meta name="keywords" content="Craft beer Glasgow, microbrewery, taproom, craft brewery, Partick, Third Date Beer"/>
+  <meta name="author" content="Third Date Beer">
+  <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,600,700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=32&q=80">
   <style>
-    html {
-      font-family: 'Work Sans', Arial, sans-serif;
-    }
-    ::selection {
-      background: #ff5722; /* Orange */
-      color: #fff;
-    }
+    html { font-family: 'Work Sans', Arial, sans-serif; }
   </style>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brandRed: "#e63946",
+            brandOrange: "#ff914d",
+            brandBlack: "#121212"
+          }
+        }
+      }
+    }
+  </script>
 </head>
-<body class="bg-white text-black">
-  <!-- Navigation -->
-  <header class="bg-black text-white shadow-lg">
-    <nav class="container mx-auto flex items-center justify-between px-4 py-3">
-      <a href="#" class="text-3xl font-extrabold text-red-600 tracking-tight">Third Date Beer</a>
-      <ul class="hidden md:flex space-x-8 font-semibold text-white text-lg">
-        <li><a href="#home" class="hover:text-orange-500 transition">Home</a></li>
-        <li><a href="#about" class="hover:text-orange-500 transition">About</a></li>
-        <li><a href="#contact" class="hover:text-orange-500 transition">Contact</a></li>
+<body class="bg-white text-brandBlack flex flex-col min-h-screen">
+
+  <!-- Navbar -->
+  <header class="bg-brandBlack text-white">
+    <nav class="container mx-auto flex items-center justify-between py-5 px-4">
+      <a href="#" class="text-2xl font-bold tracking-tight text-brandRed">Third Date Beer</a>
+      <ul class="flex space-x-6 font-semibold text-base">
+        <li><a href="#home" class="hover:text-brandOrange transition">Home</a></li>
+        <li><a href="#about" class="hover:text-brandOrange transition">About</a></li>
+        <li><a href="#contact" class="hover:text-brandOrange transition">Contact</a></li>
       </ul>
-      <button id="menu-toggle" class="md:hidden text-white focus:outline-none" aria-label="Open Navigation">
-        <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2"
-          viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M4 6h16M4 12h16M4 18h16"></path>
-        </svg>
-      </button>
     </nav>
-    <!-- Mobile menu -->
-    <div id="mobile-menu" class="md:hidden bg-black px-4 pb-4 hidden">
-      <a href="#home" class="block py-2 text-lg font-semibold hover:text-orange-500">Home</a>
-      <a href="#about" class="block py-2 text-lg font-semibold hover:text-orange-500">About</a>
-      <a href="#contact" class="block py-2 text-lg font-semibold hover:text-orange-500">Contact</a>
-    </div>
-    <script>
-      const menuToggle = document.getElementById('menu-toggle');
-      const mobileMenu = document.getElementById('mobile-menu');
-      menuToggle.addEventListener('click', () => {
-        mobileMenu.classList.toggle('hidden');
-      });
-    </script>
   </header>
 
   <!-- Hero Section -->
-  <section id="home" class="relative bg-gradient-to-br from-red-700 via-orange-500 to-black text-white">
-    <div class="container mx-auto flex flex-col md:flex-row items-center gap-8 px-4 py-16 md:py-24">
-      <div class="flex-1 z-10">
-        <h1 class="text-4xl md:text-5xl font-extrabold mb-4 leading-tight">
-          Glasgow’s Quirkiest Craft Beer <span class="text-orange-300">Adventure</span>
-        </h1>
-        <p class="text-lg md:text-xl font-medium mb-8 max-w-xl">
-          Welcome to <span class="text-orange-100 font-bold">Third Date Beer</span> — Partick’s home of edgy, exceptionally brewed craft beer and the taproom with more banter than your group chat. Love craft beer? <span class="italic">It’s a match made in Glasgow.</span>
-        </p>
-        <a href="#about" class="inline-block bg-orange-500 hover:bg-orange-600 text-white font-bold rounded-lg px-6 py-3 transition shadow-lg focus:outline-none focus:ring-2 focus:ring-red-400">
-          Explore Our Brewery
-        </a>
-      </div>
-      <div class="flex-1 flex justify-center md:justify-end relative drop-shadow-xl">
-        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80" 
-             alt="Craft Beer Glasgow - Third Date Beer" 
-             class="rounded-xl w-full max-w-md h-72 object-cover ring-4 ring-orange-500 shadow-2xl"
-             loading="lazy" />
-      </div>
+  <section id="home" class="relative overflow-hidden bg-brandRed">
+    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80"
+      alt="Craft beer at a Glasgow taproom"
+      class="absolute inset-0 w-full h-full object-cover opacity-30 pointer-events-none" />
+    <div class="relative container mx-auto flex flex-col items-center justify-center min-h-[60vh] py-16 px-4">
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white drop-shadow-lg text-center">
+        Glasgow's Edgiest <span class="text-brandOrange">Craft Beer</span> Microbrewery
+      </h1>
+      <p class="mt-6 text-lg sm:text-xl text-white max-w-2xl text-center font-medium drop-shadow">
+        Welcome to <span class="font-bold text-brandOrange">Third Date Beer</span>. We’re not your average taproom—think quirky brews, bold flavours, and more edge than your last haircut. Swing by our Partick brewery, sample something new, and maybe fall in love (at least with a pint).
+      </p>
+      <a href="#contact" class="mt-10 inline-block bg-brandOrange hover:bg-brandRed text-brandBlack font-bold px-8 py-3 rounded-full shadow-lg transition focus:outline-none focus:ring-2 focus:ring-brandOrange focus:ring-offset-2">
+        Get in Touch
+      </a>
     </div>
-    <div aria-hidden="true" class="absolute top-0 right-0 left-0 h-2 bg-gradient-to-r from-orange-500/60 via-red-700/70 to-black/0"></div>
   </section>
 
   <!-- About Section -->
-  <section id="about" class="container mx-auto px-4 py-16 md:py-24">
-    <div class="flex flex-col md:flex-row items-center gap-12">
-      <div class="flex-1 mb-8 md:mb-0">
-        <img src="https://images.unsplash.com/photo-1514361892635-cebbd8b4b6b3?auto=format&fit=crop&w=600&q=80" 
-            alt="Brewery Taproom Glasgow" 
-            class="rounded-lg shadow-lg w-full max-w-lg mx-auto object-cover" loading="lazy" />
+  <section id="about" class="bg-white py-16 px-4">
+    <div class="container mx-auto flex flex-col lg:flex-row items-center gap-12">
+      <div class="lg:w-1/2 w-full mb-6 lg:mb-0">
+        <img src="https://images.unsplash.com/photo-1447279506476-3faec8071eee?auto=format&fit=crop&w=800&q=80"
+          alt="Brewery interior in Glasgow"
+          class="rounded-xl shadow-lg w-full h-80 object-cover border-4 border-brandOrange"
+        />
       </div>
-      <div class="flex-1">
-        <h2 class="text-3xl md:text-4xl font-bold mb-4 text-red-700">About Third Date Beer</h2>
-        <p class="text-lg mb-4 text-gray-800">
-          We're a fiercely independent microbrewery in the heart of Partick, Glasgow. Our beers are small-batch, big-flavour and laced with attitude (and a dash of humour). You’ll find <span class="font-semibold text-orange-600">Third Date Beer</span> pouring in shops, pubs, and—most importantly—our lively brewery taproom. We’ve got the craft beer Glasgow has been thirsting for.
+      <div class="lg:w-1/2 w-full">
+        <h2 class="text-3xl sm:text-4xl font-bold text-brandRed mb-4">Meet Your New Favourite Brewery</h2>
+        <p class="text-brandBlack text-lg mb-4">
+          Based in the heart of Partick, <strong>Third Date Beer</strong> brings unconventional craft beer to Glasgow one glass at a time. Our mission? Keep it quirky, keep it fresh, and keep your taste buds entertained.
         </p>
-        <ul class="mb-6 space-y-2">
-          <li class="flex items-center">
-            <span class="mr-2 text-orange-500 font-bold">✔</span> Quirky, award-ish craft beers brewed onsite
-          </li>
-          <li class="flex items-center">
-            <span class="mr-2 text-orange-500 font-bold">✔</span> Legendary banter & local events
-          </li>
-          <li class="flex items-center">
-            <span class="mr-2 text-orange-500 font-bold">✔</span> Edgy taproom experience with Glasgow soul
-          </li>
+        <ul class="text-brandBlack space-y-2 text-base">
+          <li>🍻 Award-winning microbrewery vibes</li>
+          <li>❤️ Small batch, big personality</li>
+          <li>🏆 Top Glasgow taproom experience</li>
         </ul>
-        <a href="#contact" class="bg-red-700 text-white rounded px-4 py-2 font-semibold hover:bg-black transition focus:outline-none focus:ring-2 focus:ring-orange-500">
-          Get in Touch
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Beers Section -->
+  <section class="bg-brandOrange py-16 px-4">
+    <div class="container mx-auto flex flex-col md:flex-row items-center gap-10">
+      <div class="md:w-1/2 w-full order-2 md:order-1">
+        <h3 class="text-3xl font-bold text-brandBlack mb-4">Taste Buds on the Third Date</h3>
+        <p class="text-brandBlack text-lg mb-4">
+          Whether you’re a hop fanatic, malt lover, or just beer-curious, our ever-changing selection has something to surprise your senses. Try our signature “Swipe Right IPA” or the bold “Awkward Silence Stout.” New taproom releases drop every month—stop in, sip up, and take your taste buds on a date to remember!
+        </p>
+        <a href="#contact" class="inline-block bg-brandBlack hover:bg-brandRed text-white font-bold px-6 py-2 rounded-full shadow transition focus:outline-none focus:ring-2 focus:ring-brandRed focus:ring-offset-2">
+          Book a Tasting
         </a>
       </div>
-    </div>
-  </section>
-
-  <!-- Craft Beer Section -->
-  <section class="bg-black text-gray-100 py-16 md:py-24">
-    <div class="container mx-auto px-4">
-      <div class="mb-12 text-center">
-        <h2 class="text-3xl md:text-4xl font-extrabold mb-3 text-orange-500">Craft Beer with Character</h2>
-        <p class="max-w-2xl mx-auto text-lg text-gray-200">Our ever-evolving line-up: from hop-heavy IPAs to citrusy sours and the toffee-nutty ales that’ll win over your gran. Each pint is crafted with a wink—some with a cosmic sense of humour.</p>
-      </div>
-      <div class="grid md:grid-cols-3 gap-8">
-        <!-- Beer 1 -->
-        <div class="bg-white text-black rounded-lg shadow-lg overflow-hidden flex flex-col">
-          <img src="https://images.unsplash.com/photo-1508385082359-f48db8534afd?auto=format&fit=crop&w=600&q=80" 
-               alt="Hopped Up IPA" class="h-48 w-full object-cover" loading="lazy" />
-          <div class="p-6 flex-1 flex flex-col">
-            <h3 class="text-xl font-bold mb-2 text-red-600">Hopped Up IPA</h3>
-            <p class="mb-4 text-gray-600 flex-1">An unapologetically hoppy IPA bursting with tropical fruits and as bold as your third date chat.</p>
-            <span class="font-semibold text-orange-500">6.2% ABV</span>
-          </div>
-        </div>
-        <!-- Beer 2 -->
-        <div class="bg-white text-black rounded-lg shadow-lg overflow-hidden flex flex-col">
-          <img src="https://images.unsplash.com/photo-1514361892635-cebbd8b4b6b3?auto=format&fit=crop&w=600&q=80"
-               alt="Glasgow Red Ale" class="h-48 w-full object-cover" loading="lazy" />
-          <div class="p-6 flex-1 flex flex-col">
-            <h3 class="text-xl font-bold mb-2 text-orange-600">Glasgow Red Ale</h3>
-            <p class="mb-4 text-gray-600 flex-1">Rich, toffee, and just a wee bit nutty. A local favourite for those who like their beer with a story (and a punchline).</p>
-            <span class="font-semibold text-red-700">5.0% ABV</span>
-          </div>
-        </div>
-        <!-- Beer 3 -->
-        <div class="bg-white text-black rounded-lg shadow-lg overflow-hidden flex flex-col">
-          <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=600&q=80"
-               alt="Partick Citrus Sour" class="h-48 w-full object-cover" loading="lazy" />
-          <div class="p-6 flex-1 flex flex-col">
-            <h3 class="text-xl font-bold mb-2 text-black">Partick Citrus Sour</h3>
-            <p class="mb-4 text-gray-600 flex-1">Bright, tart, and totally refreshing. Perfect for summer or when your Tinder date turns weird.</p>
-            <span class="font-semibold text-orange-500">4.2% ABV</span>
-          </div>
-        </div>
+      <div class="md:w-1/2 w-full order-1 md:order-2 mb-6 md:mb-0">
+        <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=800&q=80"
+         alt="Craft beer glasses snapping on a table"
+         class="rounded-xl shadow-lg w-full h-80 object-cover border-4 border-brandRed"
+         />
       </div>
     </div>
   </section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="container mx-auto py-16 md:py-24 px-4">
-    <div class="bg-orange-50 rounded-xl shadow-lg px-6 py-12 md:px-12 md:py-16 flex flex-col md:flex-row items-center gap-12">
-      <div class="flex-1 mb-8 md:mb-0">
-        <h2 class="text-3xl md:text-4xl font-bold mb-4 text-orange-600">Contact Us</h2>
-        <p class="mb-4 text-gray-800 text-lg">Ready to collaborate, visit our taproom, or just talk beer? Fire us a message or reach out by email—we promise not to ghost you.</p>
-        <ul class="mb-4 space-y-1 text-gray-600">
-          <li><span class="font-semibold text-black mr-2">Email:</span> <a href="mailto:allen.h.elvin@icloud.com" class="text-red-700 underline">allen.h.elvin@icloud.com</a></li>
-          <li><span class="font-semibold text-black mr-2">Website:</span> <span>Business information</span></li>
-          <li><span class="font-semibold text-black mr-2">Location:</span> Partick, Glasgow</li>
+  <!-- Visit Us Section -->
+  <section class="bg-brandRed py-16 px-4">
+    <div class="container mx-auto flex flex-col md:flex-row items-center gap-10">
+      <div class="md:w-1/2 w-full mb-6 md:mb-0">
+        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=80"
+         alt="People enjoying beers in a taproom"
+         class="rounded-xl shadow-lg w-full h-80 object-cover border-4 border-brandOrange"
+         />
+      </div>
+      <div class="md:w-1/2 w-full text-white">
+        <h4 class="text-3xl font-bold mb-4">Visit Our Glasgow Taproom</h4>
+        <p class="text-lg mb-4">
+          Pour decisions make for good stories. Our taproom’s open for brewery tours, tastings, or just an epic place to hang out. Drop in to meet Glasgow’s most passionate (and punniest) brewers.
+        </p>
+        <ul class="space-y-1 text-white text-base">
+          <li>📍 <span class="font-semibold">Located in Partick</span></li>
+          <li>⏰ Open Wed–Sun, 2pm–10pm</li>
+          <li>🎤 Regular events: Comedy, quizzes, music</li>
         </ul>
       </div>
-      <div class="flex-1 w-full max-w-md md:ml-auto">
-        <form action="mailto:allen.h.elvin@icloud.com" method="POST" enctype="text/plain" class="space-y-4" autocomplete="on">
-          <div>
-            <label for="name" class="block font-semibold text-orange-600 mb-2">Name</label>
-            <input type="text" id="name" name="name" required 
-                   class="w-full px-4 py-3 border-2 border-orange-200 rounded-lg focus:border-red-500 focus:ring-2 focus:ring-orange-400 text-black bg-white"
-                   autocomplete="name" />
-          </div>
-          <div>
-            <label for="email" class="block font-semibold text-orange-600 mb-2">Email</label>
-            <input type="email" id="email" name="email" required 
-                   class="w-full px-4 py-3 border-2 border-orange-200 rounded-lg focus:border-red-500 focus:ring-2 focus:ring-orange-400 text-black bg-white"
-                   autocomplete="email" />
-          </div>
-          <div>
-            <label for="message" class="block font-semibold text-orange-600 mb-2">Message</label>
-            <textarea id="message" name="message" required rows="4"
-                   class="w-full px-4 py-3 border-2 border-orange-200 rounded-lg focus:border-red-500 focus:ring-2 focus:ring-orange-400 text-black bg-white"
-                   placeholder="Tell us what’s on your mind!"></textarea>
-          </div>
-          <button type="submit" class="w-full bg-red-700 hover:bg-black text-white font-bold py-3 px-6 rounded-lg shadow-lg transition focus:outline-none focus:ring-2 focus:ring-orange-400">
-            Send Message
-          </button>
-        </form>
+    </div>
+  </section>
+
+  <!-- Contact Form Section -->
+  <section id="contact" class="bg-black py-16 px-4 flex-grow">
+    <div class="container mx-auto max-w-2xl">
+      <h5 class="text-brandRed text-3xl font-bold mb-6 text-center">Say Hi! 🍺</h5>
+      <form method="POST" action="mailto:allen.h.elvin@icloud.com" class="bg-white rounded-xl shadow-lg p-8 space-y-6" autocomplete="on">
+        <div>
+          <label for="name" class="block text-brandBlack font-semibold mb-2">Name</label>
+          <input type="text" id="name" name="name" required
+            class="w-full px-4 py-3 border-2 border-brandOrange rounded focus:ring-2 focus:ring-brandRed focus:outline-none text-brandBlack text-lg"
+            aria-label="Your Name"
+          >
+        </div>
+        <div>
+          <label for="email" class="block text-brandBlack font-semibold mb-2">Email</label>
+          <input type="email" id="email" name="email" required
+            class="w-full px-4 py-3 border-2 border-brandOrange rounded focus:ring-2 focus:ring-brandRed focus:outline-none text-brandBlack text-lg"
+            aria-label="Your Email"
+          >
+        </div>
+        <div>
+          <label for="message" class="block text-brandBlack font-semibold mb-2">Message</label>
+          <textarea id="message" name="message" rows="5" required
+            class="w-full px-4 py-3 border-2 border-brandOrange rounded focus:ring-2 focus:ring-brandRed focus:outline-none text-brandBlack text-lg"
+            aria-label="Your Message"
+          ></textarea>
+        </div>
+        <button type="submit" class="w-full bg-brandOrange hover:bg-brandRed text-brandBlack font-bold py-3 rounded-full text-xl transition focus:outline-none focus:ring-2 focus:ring-brandOrange focus:ring-offset-2">Send Message</button>
+      </form>
+      <div class="text-center text-white mt-8 space-y-1 text-base">
+        <p>Or email us at <a href="mailto:allen.h.elvin@icloud.com" class="underline hover:text-brandOrange">allen.h.elvin@icloud.com</a></p>
+        <p>Visit our website: <a href="#" class="underline hover:text-brandOrange">Third Date Beer</a></p>
       </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="bg-black text-gray-300 py-6 mt-8">
-    <div class="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between text-sm">
-      <div>
-        &copy; 2024 Third Date Beer &middot; Craft Beer Glasgow | Brewery Taproom in Glasgow
-      </div>
-      <div class="text-orange-600 font-semibold mt-3 md:mt-0">
-        Stay quirky, Glasgow!
-      </div>
+  <footer class="bg-brandBlack text-white py-6 mt-auto">
+    <div class="container mx-auto px-4 flex flex-col sm:flex-row justify-between items-center">
+      <span class="text-sm">&copy; 2024 Third Date Beer. Crafted with love (and hops) in Glasgow.</span>
+      <nav class="mt-2 sm:mt-0 flex space-x-5">
+        <a href="#home" class="hover:text-brandOrange text-sm">Home</a>
+        <a href="#about" class="hover:text-brandOrange text-sm">About</a>
+        <a href="#contact" class="hover:text-brandOrange text-sm">Contact</a>
+      </nav>
     </div>
   </footer>
 </body>
