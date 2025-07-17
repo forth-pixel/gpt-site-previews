@@ -1,212 +1,203 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Side-A | Artisan Pizza Delivery Glasgow</title>
-  <meta name="description" content="Side-A delivers quirky, artisan pizza in Partick, Glasgow. Discover bold flavours, fast delivery, and some of the best artisan pizza Glasgow offers.">
-  <meta name="keywords" content="Pizza delivery Glasgow, Artisan pizza Glasgow, pizza Partick, signature pizzas, gourmet delivery Glasgow">
-
-  <!-- Tailwind CSS CDN -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Third Date Beer | Craft Beer Glasgow & Brewery Taproom</title>
+  <meta name="description" content="Third Date Beer is a microbrewery in Partick, Glasgow, offering quirky, craft beer and a lively brewery taproom. Explore craft beer in Glasgow." />
+  <meta name="keywords" content="Craft beer Glasgow, Brewery taproom Glasgow, Third Date Beer, Microbrewery Partick" />
+  <meta name="author" content="Third Date Beer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700;900&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&display=swap" rel="stylesheet">
-
   <style>
     html {
-      font-family: 'IBM Plex Mono', monospace;
-    }
-    body {
-      background-color: #0f0f0f;
-      color: #fff;
+      font-family: 'Work Sans', Arial, sans-serif;
     }
     ::selection {
-      background: #ff4500;
+      background: #ff5722; /* Orange */
       color: #fff;
     }
   </style>
 </head>
-<body class="flex flex-col min-h-screen bg-black text-white">
-
-  <!-- Header / Navigation -->
-  <header>
-    <nav class="max-w-6xl mx-auto flex items-center justify-between p-6">
-      <a href="#" class="text-3xl font-bold text-red-600 tracking-tight">Side-<span class="text-orange-500">A</span></a>
-      <ul class="hidden md:flex space-x-10 text-lg font-medium">
-        <li>
-          <a href="#home" class="hover:text-orange-400 transition">Home</a>
-        </li>
-        <li>
-          <a href="#about" class="hover:text-orange-400 transition">About</a>
-        </li>
-        <li>
-          <a href="#contact" class="hover:text-orange-400 transition">Contact</a>
-        </li>
+<body class="bg-white text-black">
+  <!-- Navigation -->
+  <header class="bg-black text-white shadow-lg">
+    <nav class="container mx-auto flex items-center justify-between px-4 py-3">
+      <a href="#" class="text-3xl font-extrabold text-red-600 tracking-tight">Third Date Beer</a>
+      <ul class="hidden md:flex space-x-8 font-semibold text-white text-lg">
+        <li><a href="#home" class="hover:text-orange-500 transition">Home</a></li>
+        <li><a href="#about" class="hover:text-orange-500 transition">About</a></li>
+        <li><a href="#contact" class="hover:text-orange-500 transition">Contact</a></li>
       </ul>
-      <button class="md:hidden text-2xl" aria-label="Open menu">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-8 w-8 text-white">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16" />
+      <button id="menu-toggle" class="md:hidden text-white focus:outline-none" aria-label="Open Navigation">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2"
+          viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 6h16M4 12h16M4 18h16"></path>
         </svg>
       </button>
     </nav>
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="md:hidden bg-black px-4 pb-4 hidden">
+      <a href="#home" class="block py-2 text-lg font-semibold hover:text-orange-500">Home</a>
+      <a href="#about" class="block py-2 text-lg font-semibold hover:text-orange-500">About</a>
+      <a href="#contact" class="block py-2 text-lg font-semibold hover:text-orange-500">Contact</a>
+    </div>
+    <script>
+      const menuToggle = document.getElementById('menu-toggle');
+      const mobileMenu = document.getElementById('mobile-menu');
+      menuToggle.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+    </script>
   </header>
 
   <!-- Hero Section -->
-  <main id="home" class="flex-1">
-    <section class="relative bg-gradient-to-br from-red-800 via-black to-black">
-      <div class="max-w-6xl mx-auto flex flex-col-reverse md:flex-row items-center py-16 px-6 gap-10">
-        <div class="w-full md:w-1/2 space-y-8">
-          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-4 text-white">
-            Glasgow’s Wildest <span class="text-orange-500">Artisan Pizza Delivery</span>
-          </h1>
-          <p class="text-lg md:text-xl text-gray-200 mb-2 font-medium">Side-A brings <span class="text-red-400 font-bold">artisan pizza</span> to Partick, Glasgow – delivered to your doorstep with a side of attitude.</p>
-          <ul class="list-disc pl-5 space-y-1 text-orange-400">
-            <li>8 signature pizzas, with zero chill 🍕</li>
-            <li>Faster than your playlist changes tracks</li>
-            <li>Quirky, bold, and unapologetically delicious</li>
-          </ul>
-          <a href="#contact" class="inline-block bg-orange-500 hover:bg-red-600 transition text-white font-bold px-8 py-3 rounded-full mt-6 text-lg shadow-lg">Order Now</a>
+  <section id="home" class="relative bg-gradient-to-br from-red-700 via-orange-500 to-black text-white">
+    <div class="container mx-auto flex flex-col md:flex-row items-center gap-8 px-4 py-16 md:py-24">
+      <div class="flex-1 z-10">
+        <h1 class="text-4xl md:text-5xl font-extrabold mb-4 leading-tight">
+          Glasgow’s Quirkiest Craft Beer <span class="text-orange-300">Adventure</span>
+        </h1>
+        <p class="text-lg md:text-xl font-medium mb-8 max-w-xl">
+          Welcome to <span class="text-orange-100 font-bold">Third Date Beer</span> — Partick’s home of edgy, exceptionally brewed craft beer and the taproom with more banter than your group chat. Love craft beer? <span class="italic">It’s a match made in Glasgow.</span>
+        </p>
+        <a href="#about" class="inline-block bg-orange-500 hover:bg-orange-600 text-white font-bold rounded-lg px-6 py-3 transition shadow-lg focus:outline-none focus:ring-2 focus:ring-red-400">
+          Explore Our Brewery
+        </a>
+      </div>
+      <div class="flex-1 flex justify-center md:justify-end relative drop-shadow-xl">
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80" 
+             alt="Craft Beer Glasgow - Third Date Beer" 
+             class="rounded-xl w-full max-w-md h-72 object-cover ring-4 ring-orange-500 shadow-2xl"
+             loading="lazy" />
+      </div>
+    </div>
+    <div aria-hidden="true" class="absolute top-0 right-0 left-0 h-2 bg-gradient-to-r from-orange-500/60 via-red-700/70 to-black/0"></div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="container mx-auto px-4 py-16 md:py-24">
+    <div class="flex flex-col md:flex-row items-center gap-12">
+      <div class="flex-1 mb-8 md:mb-0">
+        <img src="https://images.unsplash.com/photo-1514361892635-cebbd8b4b6b3?auto=format&fit=crop&w=600&q=80" 
+            alt="Brewery Taproom Glasgow" 
+            class="rounded-lg shadow-lg w-full max-w-lg mx-auto object-cover" loading="lazy" />
+      </div>
+      <div class="flex-1">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4 text-red-700">About Third Date Beer</h2>
+        <p class="text-lg mb-4 text-gray-800">
+          We're a fiercely independent microbrewery in the heart of Partick, Glasgow. Our beers are small-batch, big-flavour and laced with attitude (and a dash of humour). You’ll find <span class="font-semibold text-orange-600">Third Date Beer</span> pouring in shops, pubs, and—most importantly—our lively brewery taproom. We’ve got the craft beer Glasgow has been thirsting for.
+        </p>
+        <ul class="mb-6 space-y-2">
+          <li class="flex items-center">
+            <span class="mr-2 text-orange-500 font-bold">✔</span> Quirky, award-ish craft beers brewed onsite
+          </li>
+          <li class="flex items-center">
+            <span class="mr-2 text-orange-500 font-bold">✔</span> Legendary banter & local events
+          </li>
+          <li class="flex items-center">
+            <span class="mr-2 text-orange-500 font-bold">✔</span> Edgy taproom experience with Glasgow soul
+          </li>
+        </ul>
+        <a href="#contact" class="bg-red-700 text-white rounded px-4 py-2 font-semibold hover:bg-black transition focus:outline-none focus:ring-2 focus:ring-orange-500">
+          Get in Touch
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Craft Beer Section -->
+  <section class="bg-black text-gray-100 py-16 md:py-24">
+    <div class="container mx-auto px-4">
+      <div class="mb-12 text-center">
+        <h2 class="text-3xl md:text-4xl font-extrabold mb-3 text-orange-500">Craft Beer with Character</h2>
+        <p class="max-w-2xl mx-auto text-lg text-gray-200">Our ever-evolving line-up: from hop-heavy IPAs to citrusy sours and the toffee-nutty ales that’ll win over your gran. Each pint is crafted with a wink—some with a cosmic sense of humour.</p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Beer 1 -->
+        <div class="bg-white text-black rounded-lg shadow-lg overflow-hidden flex flex-col">
+          <img src="https://images.unsplash.com/photo-1508385082359-f48db8534afd?auto=format&fit=crop&w=600&q=80" 
+               alt="Hopped Up IPA" class="h-48 w-full object-cover" loading="lazy" />
+          <div class="p-6 flex-1 flex flex-col">
+            <h3 class="text-xl font-bold mb-2 text-red-600">Hopped Up IPA</h3>
+            <p class="mb-4 text-gray-600 flex-1">An unapologetically hoppy IPA bursting with tropical fruits and as bold as your third date chat.</p>
+            <span class="font-semibold text-orange-500">6.2% ABV</span>
+          </div>
         </div>
-        <div class="w-full md:w-1/2 flex justify-center">
-          <img src="https://images.unsplash.com/photo-1519864600265-abb23847ef29?auto=format&fit=crop&w=700&q=80"
-               alt="Artisan pizza from Side-A"
-               class="rounded-2xl shadow-2xl border-4 border-orange-500 w-full max-w-md object-cover"
-               loading="lazy" />
+        <!-- Beer 2 -->
+        <div class="bg-white text-black rounded-lg shadow-lg overflow-hidden flex flex-col">
+          <img src="https://images.unsplash.com/photo-1514361892635-cebbd8b4b6b3?auto=format&fit=crop&w=600&q=80"
+               alt="Glasgow Red Ale" class="h-48 w-full object-cover" loading="lazy" />
+          <div class="p-6 flex-1 flex flex-col">
+            <h3 class="text-xl font-bold mb-2 text-orange-600">Glasgow Red Ale</h3>
+            <p class="mb-4 text-gray-600 flex-1">Rich, toffee, and just a wee bit nutty. A local favourite for those who like their beer with a story (and a punchline).</p>
+            <span class="font-semibold text-red-700">5.0% ABV</span>
+          </div>
+        </div>
+        <!-- Beer 3 -->
+        <div class="bg-white text-black rounded-lg shadow-lg overflow-hidden flex flex-col">
+          <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=600&q=80"
+               alt="Partick Citrus Sour" class="h-48 w-full object-cover" loading="lazy" />
+          <div class="p-6 flex-1 flex flex-col">
+            <h3 class="text-xl font-bold mb-2 text-black">Partick Citrus Sour</h3>
+            <p class="mb-4 text-gray-600 flex-1">Bright, tart, and totally refreshing. Perfect for summer or when your Tinder date turns weird.</p>
+            <span class="font-semibold text-orange-500">4.2% ABV</span>
+          </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Section 1: Our Pizzas -->
-    <section class="max-w-6xl mx-auto py-16 px-6" aria-labelledby="our-pizzas">
-      <div class="flex flex-col md:flex-row items-center gap-12">
-        <div class="w-full md:w-1/2">
-          <img src="https://images.unsplash.com/photo-1548365328-8b8493996a3a?auto=format&fit=crop&w=600&q=80"
-               alt="Signature artisan pizza"
-               class="rounded-xl shadow-lg border-2 border-red-600 object-cover w-full"
-               loading="lazy" />
-        </div>
-        <div class="w-full md:w-1/2">
-          <h2 id="our-pizzas" class="text-3xl sm:text-4xl font-bold text-orange-500 mb-4">Signature Pizzas, Zero Chill</h2>
-          <p class="text-gray-200 text-lg mb-4">
-            Ordinary delivery pizza is <span class="line-through decoration-red-600">so last year</span>. Bite into Side-A’s <strong class="text-red-400">signature 8 pizzas</strong> – wild toppings, top-tier dough, and bold flavours to turn your tastebuds up to eleven.
-          </p>
-          <ul class="pl-4 list-disc text-orange-400 space-y-1">
-            <li>Hand-stretched sourdough bases</li>
-            <li>Home-blitzed, top-secret sauces</li>
-            <li>Locally sourced cheese, meats, and veg</li>
-          </ul>
-        </div>
+  <!-- Contact Section -->
+  <section id="contact" class="container mx-auto py-16 md:py-24 px-4">
+    <div class="bg-orange-50 rounded-xl shadow-lg px-6 py-12 md:px-12 md:py-16 flex flex-col md:flex-row items-center gap-12">
+      <div class="flex-1 mb-8 md:mb-0">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4 text-orange-600">Contact Us</h2>
+        <p class="mb-4 text-gray-800 text-lg">Ready to collaborate, visit our taproom, or just talk beer? Fire us a message or reach out by email—we promise not to ghost you.</p>
+        <ul class="mb-4 space-y-1 text-gray-600">
+          <li><span class="font-semibold text-black mr-2">Email:</span> <a href="mailto:allen.h.elvin@icloud.com" class="text-red-700 underline">allen.h.elvin@icloud.com</a></li>
+          <li><span class="font-semibold text-black mr-2">Website:</span> <span>Business information</span></li>
+          <li><span class="font-semibold text-black mr-2">Location:</span> Partick, Glasgow</li>
+        </ul>
       </div>
-    </section>
-
-    <!-- Section 2: About Side-A -->
-    <section id="about" class="bg-gradient-to-r from-black via-red-900 to-black py-16">
-      <div class="max-w-6xl mx-auto flex flex-col md:flex-row-reverse items-center gap-12 px-6">
-        <div class="w-full md:w-1/2">
-          <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=600&q=80"
-               alt="Side-A team at work"
-               class="rounded-xl shadow-lg border-2 border-orange-500 object-cover w-full"
-               loading="lazy" />
-        </div>
-        <div class="w-full md:w-1/2">
-          <h2 class="text-3xl sm:text-4xl font-bold text-red-400 mb-4">About Side-A</h2>
-          <p class="text-gray-200 text-lg mb-4">
-            We’re not your average pizza shop. We're <span class="italic text-orange-400">record collectors, pun lovers, and dough rebels</span> tossing up the wildest pies in the West End. 
-          </p>
-          <p class="text-gray-300 mb-1">
-            <span class="font-semibold text-orange-500">Where?</span> Park Road, Partick, Glasgow
-          </p>
-          <p class="text-gray-300 mb-1">
-            <span class="font-semibold text-orange-500">Why?</span> Because you deserve more than a soggy Margherita at midnight.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Section 3: Why Choose Us -->
-    <section class="max-w-6xl mx-auto py-16 px-6" aria-labelledby="why-choose">
-      <div class="flex flex-col md:flex-row items-center gap-12">
-        <div class="w-full md:w-1/2">
-          <h2 id="why-choose" class="text-3xl sm:text-4xl font-bold text-orange-500 mb-4">Why Side-A?</h2>
-          <ul class="list-none space-y-3 text-lg">
-            <li class="flex items-center">
-              <span class="bg-orange-500 text-black mr-3 rounded-full p-2">
-                <svg aria-hidden="true" focusable="false" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3-8V8a1 1 0 00-2 0v2a1 1 0 002 0zm-4 0V8a1 1 0 00-2 0v2a1 1 0 002 0zm7 0a7 7 0 11-14 0 7 7 0 0114 0z"/>
-                </svg>
-              </span>
-              Pizza delivery Glasgow, but upgraded
-            </li>
-            <li class="flex items-center">
-              <span class="bg-orange-500 text-black mr-3 rounded-full p-2">
-                <svg aria-hidden="true" focusable="false" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M8.257 3.099c.366-.446.957-.691 1.608-.57l7.588 1.38c.984.18 1.517 1.276 1.031 2.098l-3.846 6.273a1.823 1.823 0 01-1.305.882l-7.588-1.38a1.33 1.33 0 01-1.03-2.097l3.846-6.273a1.823 1.823 0 011.305-.883z"/>
-                </svg>
-              </span>
-              Seamless online ordering (no weird apps)
-            </li>
-            <li class="flex items-center">
-              <span class="bg-orange-500 text-black mr-3 rounded-full p-2">
-                <svg aria-hidden="true" focusable="false" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M2.003 12.883l7.13 3.258a1 1 0 00.735 0l7.13-3.258a1 1 0 00.002-1.881l-7.13-3.258a1 1 0 00-.735 0l-7.13 3.258a1 1 0 00-.002 1.881z"/>
-                </svg>
-              </span>
-              Edgy, humorous, and a bit rebellious
-            </li>
-          </ul>
-        </div>
-        <div class="w-full md:w-1/2">
-          <img src="https://images.unsplash.com/photo-1542281286-9e0a16bb7366?auto=format&fit=crop&w=600&q=80"
-               alt="Fresh artisan pizza delivery in Glasgow"
-               class="rounded-xl shadow-lg border-2 border-red-600 object-cover w-full"
-               loading="lazy" />
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact Form Section -->
-    <section id="contact" class="bg-gradient-to-bl from-orange-900 via-black to-black py-16">
-      <div class="max-w-2xl mx-auto px-6">
-        <h2 class="text-3xl sm:text-4xl font-bold text-center text-orange-500 mb-4">Let’s Talk Pizza 🍕</h2>
-        <p class="text-center text-gray-200 mb-8">Want artisan pizza for your party, got a question about our menu, or just want to say hi? Fill out the form below &ndash; we’re listening (while spinning records).</p>
-        <form class="space-y-6 bg-black bg-opacity-80 rounded-xl p-8 border border-orange-600 shadow-2xl"
-              name="contact" method="POST" autocomplete="on">
+      <div class="flex-1 w-full max-w-md md:ml-auto">
+        <form action="mailto:allen.h.elvin@icloud.com" method="POST" enctype="text/plain" class="space-y-4" autocomplete="on">
           <div>
-            <label for="name" class="block text-gray-300 font-semibold mb-1">Name</label>
-            <input type="text" id="name" name="name" required
-                   class="w-full px-4 py-3 rounded-lg border border-orange-400 bg-gray-900 text-white focus:ring-2 focus:ring-orange-500 outline-none transition"
-                   placeholder="Your full name">
+            <label for="name" class="block font-semibold text-orange-600 mb-2">Name</label>
+            <input type="text" id="name" name="name" required 
+                   class="w-full px-4 py-3 border-2 border-orange-200 rounded-lg focus:border-red-500 focus:ring-2 focus:ring-orange-400 text-black bg-white"
+                   autocomplete="name" />
           </div>
           <div>
-            <label for="email" class="block text-gray-300 font-semibold mb-1">Email</label>
-            <input type="email" id="email" name="email" required
-                   class="w-full px-4 py-3 rounded-lg border border-orange-400 bg-gray-900 text-white focus:ring-2 focus:ring-orange-500 outline-none transition"
-                   placeholder="your@email.com">
+            <label for="email" class="block font-semibold text-orange-600 mb-2">Email</label>
+            <input type="email" id="email" name="email" required 
+                   class="w-full px-4 py-3 border-2 border-orange-200 rounded-lg focus:border-red-500 focus:ring-2 focus:ring-orange-400 text-black bg-white"
+                   autocomplete="email" />
           </div>
           <div>
-            <label for="message" class="block text-gray-300 font-semibold mb-1">Message</label>
-            <textarea id="message" name="message" rows="5" required
-                      class="w-full px-4 py-3 rounded-lg border border-orange-400 bg-gray-900 text-white focus:ring-2 focus:ring-orange-500 outline-none transition"
-                      placeholder="Tell us which pizza needs to exist..."></textarea>
+            <label for="message" class="block font-semibold text-orange-600 mb-2">Message</label>
+            <textarea id="message" name="message" required rows="4"
+                   class="w-full px-4 py-3 border-2 border-orange-200 rounded-lg focus:border-red-500 focus:ring-2 focus:ring-orange-400 text-black bg-white"
+                   placeholder="Tell us what’s on your mind!"></textarea>
           </div>
-          <button type="submit"
-                  class="w-full py-3 bg-red-600 hover:bg-orange-500 text-white font-bold text-lg rounded-lg shadow hover:scale-105 transform transition">
+          <button type="submit" class="w-full bg-red-700 hover:bg-black text-white font-bold py-3 px-6 rounded-lg shadow-lg transition focus:outline-none focus:ring-2 focus:ring-orange-400">
             Send Message
           </button>
         </form>
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
 
   <!-- Footer -->
-  <footer class="bg-black border-t border-orange-700 mt-10">
-    <div class="max-w-6xl mx-auto px-6 py-8 flex flex-col md:flex-row items-center md:justify-between gap-4">
-      <p class="text-gray-400 text-center md:text-left text-sm">
-        &copy; 2024 Side-A. Artisan Pizza Delivery Glasgow. Eat bold, stay quirky.
-      </p>
-      <div class="flex space-x-6 justify-center md:justify-end">
-        <a href="#" class="hover:text-orange-400 transition">Home</a>
-        <a href="#about" class="hover:text-orange-400 transition">About</a>
-        <a href="#contact" class="hover:text-orange-400 transition">Contact</a>
+  <footer class="bg-black text-gray-300 py-6 mt-8">
+    <div class="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between text-sm">
+      <div>
+        &copy; 2024 Third Date Beer &middot; Craft Beer Glasgow | Brewery Taproom in Glasgow
+      </div>
+      <div class="text-orange-600 font-semibold mt-3 md:mt-0">
+        Stay quirky, Glasgow!
       </div>
     </div>
   </footer>
