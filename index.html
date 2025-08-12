@@ -3,131 +3,211 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <title>The Shaft | Explore Jape’s Eye - Sexy & Raw Gallery Landing Page</title>
-  <meta name="description" content="The Shaft: Dive into the sexy, raw world of Jape’s eye. Explore sensual photography, educational content, and an exclusive gallery.">
-  <meta name="keywords" content="Jape’s eye, sensual gallery, the shaft, modern landing page, sexual health, sexy brand">
-  <meta name="author" content="The Shaft">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <!-- Smile font from Google Fonts (as similar - 'Smiley Sans') -->
-  <link href="https://fonts.googleapis.com/css2?family=Smiley+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <meta name="description" content="Third Date Records is a quirky, independent record shop in Glasgow's Partick district. We specialise in curated used vinyl and select new releases. Visit us inside Third Date Coffee.">
+  <meta name="keywords" content="record shop glasgow, vinyl glasgow, used records glasgow, third date records, third date coffee, vinyl shop glasgow, music shop glasgow">
+  <title>Third Date Records | Record Shop Glasgow</title>
+  <!-- Favicon (optional) -->
+  <link rel="icon" href="https://img.icons8.com/ios-filled/50/000000/vinyl.png">
+  <!-- Google Fonts: Montserrat -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    html {
-      font-family: 'Smiley Sans', 'Smile', sans-serif;
-      scroll-behavior: smooth;
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Montserrat', sans-serif; }
+    /* Inline Tailwind config for custom colors */
+    :root {
+      --tdr-orange: #ff6a1c;
+      --tdr-black: #171717;
+      --tdr-grey: #424242;
     }
   </style>
 </head>
-<body class="bg-gradient-to-b from-green-100 via-yellow-50 to-yellow-100 min-h-screen flex flex-col text-gray-900">
-  <!-- Hero Section -->
-  <header class="w-full bg-gradient-to-r from-green-400 to-yellow-400 shadow-lg">
-    <nav class="container mx-auto flex items-center justify-between py-6 px-4 md:px-0">
-      <span class="text-3xl font-bold tracking-tight text-green-900" style="letter-spacing:-2px;">The shaft</span>
-      <a href="#contact" class="text-green-900 bg-yellow-100 px-5 py-2 rounded-full font-semibold hover:bg-green-100 transition">Contact</a>
+<body class="bg-[#171717] text-gray-100 min-h-screen flex flex-col">
+
+  <!-- Navigation -->
+  <header class="bg-[#171717] sticky top-0 z-20 shadow-sm">
+    <nav class="max-w-6xl mx-auto flex items-center justify-between px-4 py-4">
+      <a href="#" class="font-bold text-2xl text-white tracking-tight flex align-middle">
+        <span class="sr-only">Third Date Records home</span>
+        <svg class="inline-block w-8 h-8 mr-2 text-[#ff6a1c]" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+          <circle cx="10" cy="10" r="8"/>
+          <circle cx="10" cy="10" r="3" fill="black"/>
+        </svg>
+        Third Date Records
+      </a>
+      <ul class="hidden md:flex gap-8 font-semibold text-lg">
+        <li><a href="#home" class="hover:text-[#ff6a1c] focus:text-[#ff6a1c] transition">Home</a></li>
+        <li><a href="#about" class="hover:text-[#ff6a1c] focus:text-[#ff6a1c] transition">About</a></li>
+        <li><a href="#blog" class="hover:text-[#ff6a1c] focus:text-[#ff6a1c] transition">Blog</a></li>
+        <li><a href="#contact" class="hover:text-[#ff6a1c] focus:text-[#ff6a1c] transition">Contact</a></li>
+      </ul>
+      <!-- Mobile menu button -->
+      <button id="menu-btn" class="md:hidden focus:outline-none" aria-label="Open main menu">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
     </nav>
-    <section class="container mx-auto px-4 py-12 md:py-24 flex flex-col md:flex-row items-center">
-      <div class="w-full md:w-1/2 mb-12 md:mb-0">
-        <h1 class="text-5xl md:text-6xl font-extrabold mb-4 leading-tight" style="font-family:'Smiley Sans', 'Smile', sans-serif;">
-          Experience <span class="text-yellow-600">Jape’s Eye</span><br>
-          Like Never Before.
-        </h1>
-        <p class="max-w-xl text-lg md:text-xl text-green-900 mb-8">
-          Welcome to <strong>The shaft</strong> – where sexy meets raw. We bring you bold and beautiful explorations of the male form, sensual photography, and honest education.
-        </p>
-        <a href="#gallery" class="inline-block bg-green-700 hover:bg-yellow-600 text-yellow-50 font-bold px-8 py-3 rounded-full transition text-xl shadow-lg">Explore Gallery</a>
-      </div>
-      <div class="w-full md:w-1/2 flex justify-center relative">
-        <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=600&q=80"
-             alt="Sensual male silhouette for Jape’s Eye" class="rounded-xl shadow-2xl w-full max-w-md object-cover border-4 border-yellow-300 opacity-90">
-        <span class="absolute top-0 right-8 bg-yellow-300 text-green-900 px-4 py-1 rounded-bl-xl font-semibold shadow-md text-xs">Sexy & Raw</span>
-      </div>
-    </section>
+    <!-- Mobile nav -->
+    <div id="mobile-menu" class="md:hidden flex flex-col gap-4 px-4 pb-4 hidden bg-[#171717]">
+      <a href="#home" class="block py-2 text-lg hover:text-[#ff6a1c]">Home</a>
+      <a href="#about" class="block py-2 text-lg hover:text-[#ff6a1c]">About</a>
+      <a href="#blog" class="block py-2 text-lg hover:text-[#ff6a1c]">Blog</a>
+      <a href="#contact" class="block py-2 text-lg hover:text-[#ff6a1c]">Contact</a>
+    </div>
+    <script>
+      // Mobile menu toggle
+      const btn = document.getElementById('menu-btn');
+      const menu = document.getElementById('mobile-menu');
+      btn.onclick = () => { menu.classList.toggle('hidden') }
+      // Close menu when clicking on link
+      menu.querySelectorAll('a').forEach(link =>
+        link.onclick = () => { menu.classList.add('hidden') }
+      );
+    </script>
   </header>
 
-  <!-- Main Content Sections -->
-  <main class="flex-1">
+  <!-- Hero Section -->
+  <section id="home" class="flex flex-col-reverse md:flex-row items-center max-w-6xl w-full mx-auto px-4 py-12 md:py-24">
+    <div class="md:w-1/2 space-y-7 mt-10 md:mt-0">
+      <h1 class="text-4xl md:text-5xl font-extrabold text-white leading-tight">
+        Glasgow's Quirkiest <span class="text-[#ff6a1c]">Record Shop</span>
+      </h1>
+      <p class="text-lg md:text-xl text-gray-300 font-medium">
+        Based inside <span class="text-[#ff6a1c] font-semibold">Third Date Coffee</span>.<br />
+        Serving cheeky banter &amp; curated vinyl daily. Expect rare finds, good tunes, and possibly the best coffee playlist in town.
+      </p>
+      <a href="#contact" class="inline-block px-6 py-3 bg-[#ff6a1c] hover:bg-[#e35a0d] text-black font-bold rounded-lg shadow focus:outline-none transition focus:ring-2 focus:ring-[#ff6a1c] focus:ring-offset-2 focus:ring-offset-black">
+        Spin Us a Message
+      </a>
+    </div>
+    <div class="md:w-1/2 flex justify-center items-center">
+      <img
+        src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=700&q=80"
+        alt="Close-up of vinyl records in a store"
+        class="rounded-lg shadow-xl object-cover w-full max-w-md border-4 border-[#ff6a1c]"
+        width="500" height="350" />
+    </div>
+  </section>
 
-    <!-- Section 1: About / Education -->
-    <section class="container mx-auto px-4 py-14" id="about">
-      <div class="flex flex-col md:flex-row items-center gap-10">
-        <div class="w-full md:w-1/2 mb-8 md:mb-0">
-          <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=600&q=80"
-               alt="Educational anatomical photography" class="rounded-lg shadow-lg border-4 border-green-200 w-full">
-        </div>
-        <div class="w-full md:w-1/2 flex flex-col justify-center">
-          <h2 class="text-3xl md:text-4xl font-bold mb-4 text-green-900">There Are Three Parts to the Penis</h2>
-          <p class="text-lg text-gray-700 mb-4">At <b>The shaft</b>, we believe knowledge is sexy. The penis features three main sections: <span class="font-semibold text-yellow-700">the root, the shaft, and the glans (Jape’s eye)</span>. Dive into our sensual, educational guides and visual content that celebrate the beauty and complexity of male anatomy.</p>
-          <ul class="list-disc pl-5 text-green-900 font-medium">
-            <li>The Root &mdash; the anchor</li>
-            <li>The Shaft &mdash; the journey</li>
-            <li>The Glans (Jape’s Eye) &mdash; the destination</li>
-          </ul>
-        </div>
+  <!-- About Section -->
+  <section id="about" class="bg-[#1e1e1e] py-12 md:py-20 border-t border-[#323232]">
+    <div class="max-w-5xl mx-auto px-4 flex flex-col md:flex-row gap-10 items-center">
+      <div class="md:w-1/2">
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=700&q=80"
+             alt="People browsing vinyl at a record shop"
+             class="rounded-lg shadow object-cover w-full border-2 border-[#ff6a1c]"
+             width="450" height="300" />
       </div>
-    </section>
+      <div class="md:w-1/2 mt-8 md:mt-0 space-y-5">
+        <h2 class="text-3xl md:text-4xl font-black text-[#ff6a1c] drop-shadow mb-2">About Third Date Records</h2>
+        <p class="text-lg text-gray-200 leading-relaxed font-medium">
+          Third Date Records is not your typical vinyl spot. Nestled in the back of <span class="font-bold">Third Date Coffee</span>, we blend caffeine with hard-to-find bangers, offering a <strong>hand-picked mix of used and new vinyl treasures</strong> in the heart of Partick, Glasgow.
+        </p>
+        <ul class="list-disc pl-5 space-y-1 text-gray-400 font-medium">
+          <li>Curated selection of pre-loved and new records</li>
+          <li>Edgy, irreverent Glasgow vibe</li>
+          <li>Expert recommendations (and occasional questionable jokes)</li>
+          <li>Drop-in for a dig and a brew</li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
-    <!-- Section 2: Gallery Highlight -->
-    <section class="container mx-auto px-4 py-14 bg-gradient-to-r from-yellow-100 to-green-50 rounded-3xl my-8 shadow-lg" id="gallery" aria-labelledby="gallery-heading">
-      <h2 id="gallery-heading" class="text-4xl font-bold mb-4 text-center text-yellow-800">Gallery: Feel the Heat</h2>
-      <p class="text-center text-lg text-green-900 mb-10">Unapologetic, artful, and raw. Witness bold visuals that put Jape’s eye in focus. </p>
-      <div class="grid gap-6 md:grid-cols-3">
-        <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80" alt="Sensual masculine pose 1" class="rounded-xl shadow-md border-2 border-green-300 object-cover w-full h-64">
-        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=400&q=80" alt="Artistic male close-up" class="rounded-xl shadow-md border-2 border-yellow-300 object-cover w-full h-64">
-        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Moody intimate detail" class="rounded-xl shadow-md border-2 border-green-300 object-cover w-full h-64">
+  <!-- Blog Highlights Section -->
+  <section id="blog" class="py-12 md:py-20 bg-gradient-to-br from-[#202020] via-[#171717] to-[#242424] border-t border-[#313131]">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-3xl md:text-4xl font-black text-[#ff6a1c] mb-9">From the Blog</h2>
+      <div class="grid gap-8 md:grid-cols-3">
+        <!-- Blog Post Card 1 -->
+        <article class="bg-[#232323] rounded-xl shadow-lg overflow-hidden border-2 border-[#ff6a1c]/30 flex flex-col">
+          <img src="https://images.unsplash.com/photo-1520880867055-1e30d1cb001c?auto=format&fit=crop&w=400&q=80"
+               alt="Stack of used vinyl records"
+               class="h-44 w-full object-cover" width="400" height="200"/>
+          <div class="p-5 flex flex-col flex-1">
+            <h3 class="text-xl font-bold text-white mb-2">Used Vinyl: Glasgow’s Goldmine?</h3>
+            <p class="text-gray-300 mb-4 flex-1">Why dig in dusty crates? Because that rare groove is waiting. Our top finds—and tall tales—from this month’s hauls.</p>
+            <a href="#" class="text-[#ff6a1c] font-semibold hover:underline mt-auto">Read More</a>
+          </div>
+        </article>
+        <!-- Blog Post Card 2 -->
+        <article class="bg-[#232323] rounded-xl shadow-lg overflow-hidden border-2 border-[#ff6a1c]/30 flex flex-col">
+          <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80"
+               alt="Customer selecting a record"
+               class="h-44 w-full object-cover" width="400" height="200"/>
+          <div class="p-5 flex flex-col flex-1">
+            <h3 class="text-xl font-bold text-white mb-2">Brew &amp; Groove</h3>
+            <p class="text-gray-300 mb-4 flex-1">Ever paired your flat white with Fleetwood Mac? We review the best combos (for your taste buds and your turntable).</p>
+            <a href="#" class="text-[#ff6a1c] font-semibold hover:underline mt-auto">Read More</a>
+          </div>
+        </article>
+        <!-- Blog Post Card 3 -->
+        <article class="bg-[#232323] rounded-xl shadow-lg overflow-hidden border-2 border-[#ff6a1c]/30 flex flex-col">
+          <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=400&q=80"
+               alt="Staff member holding new vinyl"
+               class="h-44 w-full object-cover" width="400" height="200"/>
+          <div class="p-5 flex flex-col flex-1">
+            <h3 class="text-xl font-bold text-white mb-2">New Arrivals: Not Your Dad’s Vinyl</h3>
+            <p class="text-gray-300 mb-4 flex-1">Fresh drops, indie darlings, and the occasional guilty pleasure. Here’s what’s spinning this week at Third Date.</p>
+            <a href="#" class="text-[#ff6a1c] font-semibold hover:underline mt-auto">Read More</a>
+          </div>
+        </article>
       </div>
-      <div class="text-center mt-10">
-        <a href="#contact" class="inline-block bg-yellow-500 hover:bg-green-700 text-green-900 font-bold px-8 py-3 rounded-full text-lg shadow-lg transition">Get in Touch</a>
-      </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Section 3: The Portfolio / Brand Promise -->
-    <section class="container mx-auto px-4 py-14">
-      <div class="flex flex-col md:flex-row-reverse items-center gap-10">
-        <div class="w-full md:w-1/2 mb-8 md:mb-0">
-          <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=600&q=80"
-               alt="Brand portfolio highlight" class="rounded-lg shadow-xl border-4 border-yellow-100 w-full">
+  <!-- Contact Section -->
+  <section id="contact" class="py-14 md:py-24 bg-[#171717] border-t border-[#232323]">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-3xl md:text-4xl font-black text-[#ff6a1c] mb-4">Spin Us a Message</h2>
+      <p class="text-lg text-gray-300 mb-8">Got a record you’re dying to find, want to recommend a banger, or just fancy a chat about our <span class="font-semibold text-[#ff6a1c]">record shop in Glasgow</span>? Drop us a message below!</p>
+      <form class="bg-[#232323] rounded-xl p-8 shadow-lg space-y-6 border-2 border-[#ff6a1c]/20" autocomplete="off" novalidate>
+        <div class="flex flex-col sm:flex-row gap-6">
+          <div class="flex-1">
+            <label for="name" class="block text-gray-300 text-sm font-semibold mb-2">Your Name</label>
+            <input type="text" id="name" name="name" required
+                   class="w-full px-4 py-2 rounded-lg bg-[#1e1e1e] text-gray-100 border border-[#3b3b3b] focus:outline-none focus:ring-2 focus:ring-[#ff6a1c] focus:border-[#ff6a1c] placeholder-gray-500"
+                   placeholder="e.g. Freddie Mercury">
+          </div>
+          <div class="flex-1">
+            <label for="email" class="block text-gray-300 text-sm font-semibold mb-2">Email</label>
+            <input type="email" id="email" name="email" required
+                   class="w-full px-4 py-2 rounded-lg bg-[#1e1e1e] text-gray-100 border border-[#3b3b3b] focus:outline-none focus:ring-2 focus:ring-[#ff6a1c] focus:border-[#ff6a1c] placeholder-gray-500"
+                   placeholder="e.g. you@email.com">
+          </div>
         </div>
-        <div class="w-full md:w-1/2 flex flex-col justify-center">
-          <h2 class="text-3xl md:text-4xl font-bold mb-4 text-yellow-700">Portfolio</h2>
-          <p class="text-lg text-green-900 mb-4">
-            Our <b>Portfolio</b> features the highest standard of sexual wellness visuals—sexy, raw, and artistically expressive. Let Jape’s eye draw you in to moments you can feel.
-          </p>
-          <a href="mailto:ccondie@gmail.com" target="_blank" class="inline-block mt-4 bg-green-600 hover:bg-yellow-500 text-yellow-50 font-bold px-6 py-2 rounded-full shadow transition">See More | Email Us</a>
+        <div>
+          <label for="message" class="block text-gray-300 text-sm font-semibold mb-2">Message</label>
+          <textarea id="message" name="message" rows="5" required
+                    class="w-full px-4 py-2 rounded-lg bg-[#1e1e1e] text-gray-100 border border-[#3b3b3b] focus:outline-none focus:ring-2 focus:ring-[#ff6a1c] focus:border-[#ff6a1c] placeholder-gray-500 resize-vertical"
+                    placeholder="What’s spinning on your mind?"></textarea>
         </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- Contact Form -->
-  <footer class="bg-green-900 py-12" id="contact" aria-labelledby="contact-heading">
-    <div class="container mx-auto px-4 max-w-2xl">
-      <h2 id="contact-heading" class="text-3xl font-bold text-yellow-200 mb-6">Contact The shaft</h2>
-      <p class="text-green-100 mb-8">Questions about <b>Jape’s eye</b>, our portfolio, or want to collaborate? Drop us a message below &mdash; we keep things sexy and confidential.</p>
-      <form action="mailto:ccondie@gmail.com" method="POST" enctype="text/plain" class="grid gap-6">
-        <label class="block">
-          <span class="text-yellow-200 font-medium">Your Name</span>
-          <input type="text" name="name" required autocomplete="name"
-                 class="mt-1 block w-full rounded-md border-green-300 bg-yellow-100 text-green-900 p-2 focus:outline-none focus:border-yellow-500">
-        </label>
-        <label class="block">
-          <span class="text-yellow-200 font-medium">Your Email</span>
-          <input type="email" name="email" required autocomplete="email"
-                 class="mt-1 block w-full rounded-md border-green-300 bg-yellow-100 text-green-900 p-2 focus:outline-none focus:border-yellow-500">
-        </label>
-        <label class="block">
-          <span class="text-yellow-200 font-medium">Message</span>
-          <textarea name="message" rows="5" required
-                    class="mt-1 block w-full rounded-md border-green-300 bg-yellow-100 text-green-900 p-2 focus:outline-none focus:border-yellow-500"></textarea>
-        </label>
         <button type="submit"
-                class="w-full bg-yellow-400 hover:bg-yellow-300 text-green-900 font-bold py-3 rounded-lg transition shadow-lg mt-2 text-lg focus:outline-none focus:ring-2 focus:ring-yellow-400">
-          Send
+                class="w-full sm:w-auto px-8 py-3 bg-[#ff6a1c] hover:bg-[#e35a0d] text-black font-bold rounded-lg shadow focus:outline-none transition focus:ring-2 focus:ring-[#ff6a1c] focus:ring-offset-2 focus:ring-offset-[#232323]">
+          Send Message
         </button>
       </form>
-      <p class="text-yellow-100 text-center mt-6">
-        &copy; 2024 The shaft &mdash; <span class="italic">Sexy | Raw | Real</span>
-      </p>
+      <!-- Alt contact method for accessibility -->
+      <div class="mt-8 text-center text-gray-400 text-sm">
+        Prefer a less retro approach? <a href="#" class="underline hover:text-[#ff6a1c]">Find us on Instagram @thirddaterecords</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-[#1e1e1e] py-8 mt-auto border-t border-[#242424]">
+    <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between">
+      <div class="text-sm text-gray-400 text-center md:text-left">
+        &copy; 2024 Third Date Records, Glasgow. | Vinyl &amp; vibes inside Third Date Coffee, Partick.
+      </div>
+      <nav class="mt-2 md:mt-0">
+        <a href="#" class="text-gray-400 hover:text-[#ff6a1c] mx-3 transition">Home</a>
+        <a href="#about" class="text-gray-400 hover:text-[#ff6a1c] mx-3 transition">About</a>
+        <a href="#blog" class="text-gray-400 hover:text-[#ff6a1c] mx-3 transition">Blog</a>
+        <a href="#contact" class="text-gray-400 hover:text-[#ff6a1c] mx-3 transition">Contact</a>
+      </nav>
     </div>
   </footer>
 </body>
